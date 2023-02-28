@@ -1,0 +1,169 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    word-break: break-all;
+    cursor: default;
+}
+
+
+body {
+    background-color: rgb(59, 65, 65);
+    padding-top: 30px;
+    display: flex; 
+    justify-content: space-around; 
+    height: 100vh; 
+    font-family: 'Comic Sans Ms', Arial, Helvetica, sans-serif;
+  }
+
+
+#tabuleiro{
+    background-color: rgb(145, 145, 145);
+    border-radius: 20px;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+
+    font-size: 130px;
+    position: relative;
+}
+
+
+.quadrado{
+    width: 167px;
+    height: 167px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.primeiroQuadrado, .segundoQuadrado, .quartoQuadrado, .quintoQuadrado, .setimoQuadrado, .oitavoQuadrado{
+    border-bottom: 10px solid;
+}
+
+
+.primeiroQuadrado, .segundoQuadrado, .quartoQuadrado, .quintoQuadrado{
+    border-right: 10px solid;
+}
+
+
+.terceiroQuadrado, .sextoQuadrado{
+    border-right: 10px solid;
+}
+
+
+.placar{
+    font-size: 70px;
+    margin-top: 200px;
+}
+
+
+#botao1{
+    width: 200px;
+    height: 40px;
+    position: absolute;
+    right: 250px;
+    bottom: -60px;
+    transform: translateX(50%);
+}
+
+
+#botao2{
+    width: 200px;
+    height: 40px;
+    position: absolute;
+    bottom: -110px;
+    right: 250px;
+    transform: translateX(50%);
+}
+
+
+#botao1, #botao2{
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 1000px){
+    body{
+        flex-direction: column;
+        align-items: center;
+        padding-top: 400px;
+    }
+
+    .placarX{
+        order: 3;
+        margin-top: 20px;
+    }
+
+
+    
+    .placarO{
+        margin-top: 130px;
+    }
+
+}
+
+
+@media screen and (max-width: 570px){
+    #tabuleiro{
+      width: 300px;
+      height: 300px;
+      font-size: 90px;
+    }
+
+    .quadrado{
+       width: 100px;
+       height: 100px;
+    }
+
+    #botao1{
+       transform: translateX(100%)
+    }
+
+    #botao2{
+       transform: translateX(100%)
+    }
+}
+
+
+@media screen and (max-width: 339px){
+    #tabuleiro{
+        width: 220px;
+        height: 220px;
+        font-size: 70px;
+      }
+
+      .quadrado{
+        width: 73px;
+        height: 73px;
+     }
+ 
+     #botao1{
+        transform: translateX(120%)
+     }
+ 
+     #botao2{
+        transform: translateX(120%)
+     }
+ }
+
+
+ @media screen and (max-height: 510px){
+    body{
+        padding-top: 500px;
+    }
+ }
+
+
+
+
+
